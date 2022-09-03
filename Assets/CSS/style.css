@@ -23,11 +23,9 @@
 
 .title:hover{
     color: red;
-    transform: scale(2);
-
-    margin: 2rem 2rem 3rem;
+    font-size: 3rem;
 }
 
 .title, .title:hover{
-    transition: ease-in-out .3s color, ease-in-out .3s margin, ease-in-out .3s transform;
+    transition: ease-in-out .3s color, ease-in-out .3s font-size;
 }
