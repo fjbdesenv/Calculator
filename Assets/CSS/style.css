@@ -1,0 +1,33 @@
+@import url("./variabes/variabes.css");
+
+/* CSS reset */
+:root{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+    font-size: 16px;
+}
+
+.title{
+    font-size: 2rem;
+    text-align: center;
+
+    margin: 1rem 1rem 2rem;
+
+    color: darkblue;
+    text-shadow: 1px 1px 3px slateblue;
+
+    letter-spacing: 2px;
+}
+
+.title:hover{
+    color: red;
+    transform: scale(2);
+
+    margin: 2rem 2rem 3rem;
+}
+
+.title, .title:hover{
+    transition: ease-in-out .3s color, ease-in-out .3s margin, ease-in-out .3s transform;
+}
