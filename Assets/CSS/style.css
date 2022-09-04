@@ -25,6 +25,10 @@ body {
     letter-spacing: 2px;
 }
 
+.off {
+    background-color: #eee;
+}
+
 .button {
     font-weight: 600;
     background-color: #ddd;
