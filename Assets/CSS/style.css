@@ -18,20 +18,20 @@ body {
 
     margin: 1rem 1rem 2rem;
 
-    color: red;
     text-shadow: 1px 1px 3px slateblue;
 
     letter-spacing: 2px;
 }
 
 .button {
+    font-weight: 600;
     background-color: #ddd;
     color: #000;
 
+    border-radius: 4px;
+
     padding: 10px;
     margin: 5px;
-
-    border-radius: 4px;
 
     height: 20%;
     width: 30%;
@@ -44,9 +44,12 @@ body {
     background-color: #888;
 }
 
+.button, .button:hover{
+    transition: ease-in-out .3s color,  ease-in-out .3s background-color;
+}
+
 footer {
-    color: cornflowerblue;
-    text-shadow: 1px 1px 5px turquoise;
+    text-shadow: 1px 1px 1px gray;
 }
 
 footer:hover {
