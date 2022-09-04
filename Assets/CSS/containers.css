@@ -13,8 +13,11 @@
 }
 
 .container-display {
-    color: #99f;
+    color: red;
     background-color: #fff;
+
+    font-size: 1.5rem;
+    font-weight: 600;
 
     border-radius: 7.5px;
     border: 2px solid #ddd;

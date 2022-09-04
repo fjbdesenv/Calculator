@@ -1,0 +1,14 @@
+@media screen and (max-width: 480px) {
+    .button{
+        width: 20%;
+    }
+}
+
+@media screen and (max-width: 350px) {
+    .button{
+        width: 18%;
+        font-size: 0.8rem;
+
+        padding: 2px;
+    }
+}
