@@ -14,6 +14,7 @@
     <!-- CSS -->
     <link rel="stylesheet" href="./Assets/CSS/style.css">
     <link rel="stylesheet" href="./Assets/CSS/flex-box.css">
+    <link rel="stylesheet" href="./Assets/CSS/containers.css">
     <link rel="stylesheet" href="./Assets/CSS/outhers.css">
 
     <!-- JS -->
@@ -26,8 +27,30 @@
     <header class="title">
         Calculadora
     </header>
-    <main>
-        <!-- Content -->
+    <main class="container-main">
+        <div class="container-display off" id="display">
+            <!-- Conteudo display -->
+        </div>
+        <div class="container-buttons">
+            <button class="button" onclick="on()">ON</button>
+            <button class="button" onclick="off()">OFF</button>
+            <button class="button" onclick="calculate()">=</button>
+            <button class="button" onclick="point()">,</button>
+            <button class="button" onclick="getNumber(1)">1</button>
+            <button class="button" onclick="getNumber(2)">2</button>
+            <button class="button" onclick="getNumber(3)">3</button>
+            <button class="button" onclick="getNumber(4)">4</button>
+            <button class="button" onclick="getNumber(5)">5</button>
+            <button class="button" onclick="getNumber(6)">6</button>
+            <button class="button" onclick="getNumber(7)">7</button>
+            <button class="button" onclick="getNumber(8)">8</button>
+            <button class="button" onclick="getNumber(9)">9</button>
+            <button class="button" onclick="getNumber(0)">0</button>
+            <button class="button" onclick="getOperator('+')">+</button>
+            <button class="button" onclick="getOperator('-')">-</button>
+            <button class="button" onclick="getOperator('*')">*</button>
+            <button class="button" onclick="getOperator('/')">/</button>
+        </div>
     </main>
     <footer>
         Fábio Júnior Barbosa
