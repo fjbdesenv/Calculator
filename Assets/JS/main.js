@@ -1,5 +1,4 @@
 /* variabes  */
-
 const elementDisplay = document.getElementById("display");
 let active = false;
 let numbers = [];
@@ -49,7 +48,6 @@ const checkNumbersAndOperator = (
   operator = undefined,
   num2 = undefined
 ) => {
-  console.log(num1, operator, num2);
   return (
     typeof num1 === "number" && typeof num2 === "number" && isOperator(operator)
   );
@@ -65,7 +63,7 @@ const getNumber = (number) => {
 };
 
 const point = () => {
-  if (!hasPoint) {
+  if (!hasPoint && active) {
     hasPoint = true;
     setDisplay(elementDisplay.innerHTML + ".");
     currentNumber += ".";
@@ -73,7 +71,7 @@ const point = () => {
 };
 
 const getOperator = (operator) => {
-  if (isOperator(operator)) {
+  if (isOperator(operator) && active) {
     if (currentNumber != numbers[numbers.length - 1]) {
       numbers.push(currentNumber);
     }
@@ -86,7 +84,6 @@ const getOperator = (operator) => {
 };
 
 const calculateResult = () => {
-  console.log(numbers[0], numbers[1], numbers[2]);
   let result = "Erro";
 
   switch (numbers[1]) {
@@ -108,25 +105,28 @@ const calculateResult = () => {
 };
 
 const calculate = () => {
-  hasPoint = false;
-  numbers.push(currentNumber);
-  onDisplay = true;
+  if(active){
 
-  while (numbers.length > 1) {
-    if (
-      checkNumbersAndOperator(
-        Number(numbers[0]),
-        numbers[1],
-        Number(numbers[2])
-      )
-    ) {
-      calculateResult();
-    } else {
-      reset();
-      setDisplay("Erro");
-      return;
+    hasPoint = false;
+    numbers.push(currentNumber);
+    onDisplay = true;
+  
+    while (numbers.length > 1) {
+      if (
+        checkNumbersAndOperator(
+          Number(numbers[0]),
+          numbers[1],
+          Number(numbers[2])
+        )
+      ) {
+        calculateResult();
+      } else {
+        reset();
+        setDisplay("Erro");
+        return;
+      }
     }
+    setDisplay(numbers[0]);
+    currentNumber = numbers[0];
   }
-  setDisplay(numbers[0]);
-  currentNumber = numbers[0];
 };
