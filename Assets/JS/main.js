@@ -130,3 +130,19 @@ const calculate = () => {
     currentNumber = numbers[0];
   }
 };
+
+const getKey = (event) => {
+  const code =  event.keyCode;
+  if (code == 13) on();
+  else if(code == 187) calculate();
+  else if(code >= 48 && code <= 57) getNumber(code - 48);
+  else if(code == 27) off();
+  else if(code == 190 || code == 188) point();
+  else if(code == 106) getOperator('*');
+  else if(code == 111) getOperator('/');
+  else if(code == 107) getOperator('+');
+  else if(code == 109) getOperator('-');
+}
+
+document.addEventListener('keydown', (event) =>  getKey(event));
+
