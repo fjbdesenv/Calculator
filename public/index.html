@@ -1,17 +1,91 @@
 <!DOCTYPE html>
 <html lang="">
-  <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width,initial-scale=1.0">
-    <link rel="icon" href="<%= BASE_URL %>favicon.ico">
-    <title><%= htmlWebpackPlugin.options.title %></title>
-  </head>
-  <body>
-    <noscript>
-      <strong>We're sorry but <%= htmlWebpackPlugin.options.title %> doesn't work properly without JavaScript enabled. Please enable it to continue.</strong>
-    </noscript>
-    <div id="app"></div>
-    <!-- built files will be auto injected -->
-  </body>
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+  <link rel="icon" href="<%= BASE_URL %>favicon.png">
+  <title>
+    <%= htmlWebpackPlugin.options.title %>
+  </title>
+
+  <style>
+    /* CSS reset */
+    :root {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+
+      font-size: 16px;
+    }
+
+    body {
+      width: 95vw;
+      height: 90vh;
+      background-color: #000000;
+    }
+
+    .d-flex {
+      display: flex;
+    }
+
+    .center-center {
+      align-items: center;
+      justify-content: center;
+    }
+
+    .center-between {
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .row {
+      flex-direction: row;
+    }
+
+    .column {
+      flex-direction: column;
+    }
+
+    .wrap {
+      flex-wrap: column wrap;
+    }
+
+    .w100 {
+      width: 100%;
+    }
+
+    .w75 {
+      width: 75%;
+    }
+
+    .w25 {
+      width: 75%;
+    }
+
+    .h100 {
+      height: 100%;
+    }
+
+    .h75 {
+      height: 75%;
+    }
+
+    .h25 {
+      height: 75%;
+    }
+  </style>
+
+</head>
+
+<body class="d-flex column center-between">
+  <noscript>
+    <strong>We're sorry but <%= htmlWebpackPlugin.options.title %> doesn't work properly without JavaScript enabled.
+        Please enable it to continue.</strong>
+  </noscript>
+  <div id="app" class="d-flex column center-between h100"></div>
+  <!-- built files will be auto injected -->
+</body>
+
 </html>
